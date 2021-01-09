@@ -6,4 +6,4 @@ Here is a link to the website on GITHub Pages:
 
 https://oldpcken.github.io/ohmyfood/
 
-Kenneth Rice, ste developer
+Kenneth Rice, site developer
