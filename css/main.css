@@ -1,3 +1,33 @@
+.loader {
+  position: relative;
+  top: 40vh;
+  left: 20vw;
+  padding: 0;
+  z-index: 9999;
+}
 
+.food {
+  width: 50vw;
+  animation: spin 3s linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes spin {
+  0% {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: rotate(350deg) scale(2);
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(700deg) scale(3);
+  }
+}
+/*--!!Nest Media Queries in BEM blocks!!!--*/
+/*  For Tablets  */
+/*  For Desktops  */
 
 /*# sourceMappingURL=main.css.map */

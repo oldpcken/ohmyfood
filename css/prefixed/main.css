@@ -1,0 +1,49 @@
+.loader {
+  position: relative;
+  top: 20vh;
+  left: 20vw;
+  padding: 0;
+}
+
+.food {
+  width: 50vw;
+  -webkit-animation: spin 3s infinite linear;
+          animation: spin 3s infinite linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    opacity: 1;
+    scale: 1;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    opacity: 0;
+    scale: 2;
+    -webkit-transform: rotate(800deg);
+            transform: rotate(800deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    opacity: 1;
+    scale: 1;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    opacity: 0;
+    scale: 2;
+    -webkit-transform: rotate(800deg);
+            transform: rotate(800deg);
+  }
+}
+/*--!!Nest Media Queries in BEM blocks!!!--*/
+/*  For Tablets  */
+/*  For Desktops  */
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3Nhc3MvbWFpbi5zY3NzIiwiLi4vbWFpbi5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBU0E7RUFDSSxrQkFBQTtFQUNBLFNBQUE7RUFDQSxVQUFBO0VBQ0EsVUFBQTtBQ1JKOztBRFdFO0VBQ0UsV0FBQTtFQUNBLDBDQUFBO1VBQUEsa0NBQUE7RUFDQSxxQ0FBQTtVQUFBLDZCQUFBO0FDUko7O0FEV0U7RUFDRTtJQUNFLFVBQUE7SUFDQSxRQUFBO0lBQ0EsK0JBQUE7WUFBQSx1QkFBQTtFQ1JKO0VEVUU7SUFDRSxVQUFBO0lBQ0EsUUFBQTtJQUNBLGlDQUFBO1lBQUEseUJBQUE7RUNSSjtBQUNGOztBREZFO0VBQ0U7SUFDRSxVQUFBO0lBQ0EsUUFBQTtJQUNBLCtCQUFBO1lBQUEsdUJBQUE7RUNSSjtFRFVFO0lBQ0UsVUFBQTtJQUNBLFFBQUE7SUFDQSxpQ0FBQTtZQUFBLHlCQUFBO0VDUko7QUFDRjtBRFlBLDRDQUFBO0FBRUEsa0JBQUE7QUFLQSxtQkFBQSIsImZpbGUiOiJtYWluLmNzcyJ9 */

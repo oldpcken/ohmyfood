@@ -4,7 +4,8 @@
   "description": "scss for project 3",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss:./css/main.css"
+    "sass": "sass --watch ./sass/main.scss:./css/main.css",
+    "prefix": "postcss ./css/main.css --use autoprefixer -d ./css/prefixed/"
   },
   "repository": {
     "type": "git",
@@ -14,5 +15,6 @@
     "none"
   ],
   "author": "KRice",
-  "license": "MIT"
+  "license": "MIT",
+  "browserslist": "last 4 versions"
 }
