@@ -8,33 +8,90 @@
 @import "./layouts/nav";
 
 .loader {
-    position: relative;
-    top: 40vh;
-    left: 20vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
     padding: 0;
-    z-index: 9999;
- }
+    animation: disappear 3s ease-in forwards;
+    background-color: darkslategray;
+    z-index: 4;
+}
   
-  .food {
-    width: 50vw;
-    animation: spin 3s linear;
-    animation-fill-mode: forwards;
+.food {
+  position: fixed;
+  top: 28%;
+  left: 27.5%;
+  width: 45%;
+  animation: spin 3s linear forwards;
+}
+
+// @keyframes recede {
+//   0% {
+//     z-index: 5;
+//   }
+//   100% {
+//     z-index: -1;
+//   }
+// }
+
+@keyframes spin {
+  0% {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
   }
-  
-  @keyframes spin {
-    0% {
-      opacity: 1;
-      transform: rotate(0deg) scale(1);
-    }
-    50% {
-      opacity: 1;
-      transform: rotate(350deg) scale(2);
-    }
-    100% {
-      opacity: 0;
-      transform: rotate(700deg) scale(3);
-    }
+  25% {
+    opacity: 1;
+    transform: rotate(175deg) scale(4);
   }
+  50% {
+    opacity: 1;
+    transform: rotate(350deg) scale(6);
+  }
+  75% {
+    opacity: 1;
+    transform: rotate(525deg) scale(8);
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(700deg) scale(10);
+    z-index: -1;
+  }
+}
+
+@keyframes disappear {
+  0% {
+    opacity: 1;
+    z-index: 5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -2;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+.logo {
+  display: block;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px;
+}
+
+footer {
+  color: white;
+  background-color: black;
+  padding: 20px;
+}
+
 
 
 /*--!!Nest Media Queries in BEM blocks!!!--*/

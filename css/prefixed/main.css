@@ -1,14 +1,15 @@
 .loader {
   position: relative;
-  top: 20vh;
+  top: 40vh;
   left: 20vw;
   padding: 0;
+  z-index: 9999;
 }
 
 .food {
   width: 50vw;
-  -webkit-animation: spin 3s infinite linear;
-          animation: spin 3s infinite linear;
+  -webkit-animation: spin 3s linear;
+          animation: spin 3s linear;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -16,34 +17,40 @@
 @-webkit-keyframes spin {
   0% {
     opacity: 1;
-    scale: 1;
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    -webkit-transform: rotate(0deg) scale(1);
+            transform: rotate(0deg) scale(1);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: rotate(350deg) scale(2);
+            transform: rotate(350deg) scale(2);
   }
   100% {
     opacity: 0;
-    scale: 2;
-    -webkit-transform: rotate(800deg);
-            transform: rotate(800deg);
+    -webkit-transform: rotate(700deg) scale(3);
+            transform: rotate(700deg) scale(3);
   }
 }
 
 @keyframes spin {
   0% {
     opacity: 1;
-    scale: 1;
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    -webkit-transform: rotate(0deg) scale(1);
+            transform: rotate(0deg) scale(1);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: rotate(350deg) scale(2);
+            transform: rotate(350deg) scale(2);
   }
   100% {
     opacity: 0;
-    scale: 2;
-    -webkit-transform: rotate(800deg);
-            transform: rotate(800deg);
+    -webkit-transform: rotate(700deg) scale(3);
+            transform: rotate(700deg) scale(3);
   }
 }
 /*--!!Nest Media Queries in BEM blocks!!!--*/
 /*  For Tablets  */
 /*  For Desktops  */
 
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3Nhc3MvbWFpbi5zY3NzIiwiLi4vbWFpbi5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBU0E7RUFDSSxrQkFBQTtFQUNBLFNBQUE7RUFDQSxVQUFBO0VBQ0EsVUFBQTtBQ1JKOztBRFdFO0VBQ0UsV0FBQTtFQUNBLDBDQUFBO1VBQUEsa0NBQUE7RUFDQSxxQ0FBQTtVQUFBLDZCQUFBO0FDUko7O0FEV0U7RUFDRTtJQUNFLFVBQUE7SUFDQSxRQUFBO0lBQ0EsK0JBQUE7WUFBQSx1QkFBQTtFQ1JKO0VEVUU7SUFDRSxVQUFBO0lBQ0EsUUFBQTtJQUNBLGlDQUFBO1lBQUEseUJBQUE7RUNSSjtBQUNGOztBREZFO0VBQ0U7SUFDRSxVQUFBO0lBQ0EsUUFBQTtJQUNBLCtCQUFBO1lBQUEsdUJBQUE7RUNSSjtFRFVFO0lBQ0UsVUFBQTtJQUNBLFFBQUE7SUFDQSxpQ0FBQTtZQUFBLHlCQUFBO0VDUko7QUFDRjtBRFlBLDRDQUFBO0FBRUEsa0JBQUE7QUFLQSxtQkFBQSIsImZpbGUiOiJtYWluLmNzcyJ9 */
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3Nhc3MvbWFpbi5zY3NzIiwiLi4vbWFpbi5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBU0E7RUFDSSxrQkFBQTtFQUNBLFNBQUE7RUFDQSxVQUFBO0VBQ0EsVUFBQTtFQUNBLGFBQUE7QUNSSjs7QURXRTtFQUNFLFdBQUE7RUFDQSxpQ0FBQTtVQUFBLHlCQUFBO0VBQ0EscUNBQUE7VUFBQSw2QkFBQTtBQ1JKOztBRFdFO0VBQ0U7SUFDRSxVQUFBO0lBQ0Esd0NBQUE7WUFBQSxnQ0FBQTtFQ1JKO0VEVUU7SUFDRSxVQUFBO0lBQ0EsMENBQUE7WUFBQSxrQ0FBQTtFQ1JKO0VEVUU7SUFDRSxVQUFBO0lBQ0EsMENBQUE7WUFBQSxrQ0FBQTtFQ1JKO0FBQ0Y7O0FESkU7RUFDRTtJQUNFLFVBQUE7SUFDQSx3Q0FBQTtZQUFBLGdDQUFBO0VDUko7RURVRTtJQUNFLFVBQUE7SUFDQSwwQ0FBQTtZQUFBLGtDQUFBO0VDUko7RURVRTtJQUNFLFVBQUE7SUFDQSwwQ0FBQTtZQUFBLGtDQUFBO0VDUko7QUFDRjtBRFlBLDRDQUFBO0FBRUEsa0JBQUE7QUFLQSxtQkFBQSIsImZpbGUiOiJtYWluLmNzcyJ9 */
