@@ -4,11 +4,18 @@
 
 @import "./components/buttons";
 
+@import "./pages/allmenus";
+
 @import "./layouts/header";
 @import "./layouts/nav";
 
+@font-face {
+  font-family: "Shrikhand";
+  src:url("/fonts/Shrikhand-Regular.ttf");
+}
+
 .loader {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
@@ -26,15 +33,6 @@
   width: 45%;
   animation: spin 3s linear forwards;
 }
-
-// @keyframes recede {
-//   0% {
-//     z-index: 5;
-//   }
-//   100% {
-//     z-index: -1;
-//   }
-// }
 
 @keyframes spin {
   0% {
@@ -74,34 +72,210 @@
   }
 }
 
+* {
+  font-family: $page-text, sans-serif;
+ }
+
 a {
   text-decoration: none;
 }
 
-.logo {
+main {
+  background-color: #f2f2f2;
+}
+
+.header__logo {
   display: block;
   width: 200px;
   margin-left: auto;
   margin-right: auto;
-  padding: 5px;
+  padding: .5em 0;
+  position: relative;
+  z-index: 1;
 }
 
-footer {
-  color: white;
-  background-color: black;
+.fa-map-marker-alt {
+  width: 1.5em;
+}
+
+.location {
+  display: block;
+  font-weight: 700;
+  background-color: #d8d5d5;
+  text-align: center;
+  padding: 15px;
+  margin: 10px auto;
+}
+
+.explore {
+  display: inline-block;
+  text-align: center;
+  color: #fff;
+  padding: 15px 20px;
+  border-radius: 25px;
+  background-color: $color-secondary;
+  background-image: linear-gradient($color-secondary, $color-primary);
+  box-shadow: 0 8px 12px rgba(0,0,0,0.07), 0 8px 12px rgba(0,0,0,0.14);
+  margin: 40px auto;
+}
+
+.verbiage {
+  display: block;
+  background-color: #f2f2f2;
+  text-align: center;
+  padding: 10px;
+  margin: -9px auto 10px auto;
+}
+
+.howitworks__container {
+  display: flex;
+  flex-flow: column;
+  padding: 5px 0 10px 0;
+  margin: 10 0 30px 0;
+  align-items: center;
+}
+
+.howitworks__item {
+  width: 93%;
+  padding: 15px 0;
+  background-color: #f2f2f2;
+  margin: 10px 0;
+  border-radius: 25px;
+  box-shadow: 0 8px 12px rgba(0,0,0,0.07), 0 8px 12px rgba(0,0,0,0.14);
+  &:nth-child(3) {
+    @include lightenbg;
+  }
+}
+
+.number {
+  background-color: $color-primary;
+  border-radius: 50%;
+  padding: 2px 5px;
+  color: #fff;
+  margin-left: -5px;
+  font-size: .8em;
+}
+
+.fa-store {
+  color: $color-primary;
+}
+
+.icon {
+  width: 1em;
   padding: 20px;
 }
 
+.howitworks__bubble {
+  display: inline;
+  font-weight: 700;
+}
 
+.indent-text {
+  padding-left: 10px;
+  color: #000;
+}
+
+.restuarants__container {
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: column;
+  // @if min-width > 600px {
+  //   @media
+  // }
+}
+
+.fa-heart {
+  font-size: 1.5em;
+  padding: 15px;
+}
+
+#img-move {
+  object-position: center 61%;
+}
+
+.restuarants {
+  padding-top: 20px;
+  &__container {
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: column;
+    padding: 5px 5px 45px 5px;
+    margin: 0;
+  }
+  &__card {
+    position: relative;
+    border-radius: 15px;
+    background-color: white;
+    padding: 0;
+    width: 95%;
+    font-size: 14px;
+    line-height: .5;
+    box-shadow: 0 8px 12px rgba(0,0,0,0.07), 0 8px 12px rgba(0,0,0,0.14);
+    margin: 5px 0 10px 10px;
+    
+    &__img {
+      object-fit: cover;
+      width: 100%;
+      height: 220px;
+      object-position: center 75%;
+      border-radius: 15px 15px 0 0;
+      padding: 0;
+    }
+    & .new {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      z-index: 1;
+      padding: 10px 30px;
+      @include dark-text;
+      background-color: $color-tertiary;
+    }
+       
+
+  }
+}
+
+.footer {
+  // margin-top: 25px;
+  color: #fff;
+  background-color: #000;
+  padding: 20px;
+  &__title {
+    font-family: $title-text, cursive;
+    color: #fff;
+    padding-left: 15px;
+  }
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    padding: 7px;  
+    &__item > a > i {
+      display: inline-block;
+      padding-right: 5px;
+    }
+  }
+  &__nav > a {
+    color: #fff;
+    padding: 5px;
+  }
+}
+
+.fa-utensils {
+  padding-right: 1em;
+}
+.fa-hands-helping {
+  padding-right: 1em;
+  font-size: .8em
+}
 
 /*--!!Nest Media Queries in BEM blocks!!!--*/
 
 /*  For Tablets  */
-@media screen and (min-width: 600px) {
+// @media screen and (min-width: 600px) {
     
-}
+// }
 
 /*  For Desktops  */
-@media screen and (min-width: 1080px) {
+// @media screen and (min-width: 1080px) {
     
-}
+// }

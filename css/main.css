@@ -1,5 +1,75 @@
-.loader {
+.fa-arrow-left {
+  font-size: 1.5em;
+  padding: 0.5em 0 1em 1em;
   position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+}
+
+.main {
+  border-radius: 30px 30px 0 0;
+  z-index: 3;
+}
+
+.header__img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center center;
+  height: 220px;
+  z-index: -2;
+}
+
+.menu__title {
+  display: inline-block;
+  justify-content: space-between;
+  margin-bottom: 0;
+}
+
+.menu__name {
+  font-family: Shrikhand, cursive;
+  display: inline-block;
+  padding-top: 20px;
+}
+
+.menu__entrees {
+  padding: 5px;
+}
+
+.menu__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu__rule {
+  border: 2px solid #99E2D0;
+  width: 45px;
+  justify-content: left;
+  margin: -12px 0 0 3px;
+}
+
+.order {
+  display: inline-block;
+  margin: 60px auto;
+}
+
+.order__link {
+  display: inline-block;
+  color: #fff;
+  padding: 15px 80px;
+  border-radius: 25px;
+  background-color: #FF79DA;
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.07), 0 8px 12px rgba(0, 0, 0, 0.14);
+  margin: 60px auto;
+}
+
+@font-face {
+  font-family: "Shrikhand";
+  src: url("/fonts/Shrikhand-Regular.ttf");
+}
+.loader {
+  position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
@@ -54,22 +124,194 @@
     z-index: -2;
   }
 }
+* {
+  font-family: roboto, sans-serif;
+}
+
 a {
   text-decoration: none;
 }
 
-.logo {
+main {
+  background-color: #f2f2f2;
+}
+
+.header__logo {
   display: block;
   width: 200px;
   margin-left: auto;
   margin-right: auto;
+  padding: 0.5em 0;
+  position: relative;
+  z-index: 1;
+}
+
+.fa-map-marker-alt {
+  width: 1.5em;
+}
+
+.location {
+  display: block;
+  font-weight: 700;
+  background-color: #d8d5d5;
+  text-align: center;
+  padding: 15px;
+  margin: 10px auto;
+}
+
+.explore {
+  display: inline-block;
+  text-align: center;
+  color: #fff;
+  padding: 15px 20px;
+  border-radius: 25px;
+  background-color: #FF79DA;
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.07), 0 8px 12px rgba(0, 0, 0, 0.14);
+  margin: 40px auto;
+}
+
+.verbiage {
+  display: block;
+  background-color: #f2f2f2;
+  text-align: center;
+  padding: 10px;
+  margin: -9px auto 10px auto;
+}
+
+.howitworks__container {
+  display: flex;
+  flex-flow: column;
+  padding: 5px 0 10px 0;
+  margin: 10 0 30px 0;
+  align-items: center;
+}
+
+.howitworks__item {
+  width: 93%;
+  padding: 15px 0;
+  background-color: #f2f2f2;
+  margin: 10px 0;
+  border-radius: 25px;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.07), 0 8px 12px rgba(0, 0, 0, 0.14);
+}
+.howitworks__item:nth-child(3) {
+  background-color: #f2eafb;
+}
+
+.number {
+  background-color: #9356DC;
+  border-radius: 50%;
+  padding: 2px 5px;
+  color: #fff;
+  margin-left: -5px;
+  font-size: 0.8em;
+}
+
+.fa-store {
+  color: #9356DC;
+}
+
+.icon {
+  width: 1em;
+  padding: 20px;
+}
+
+.howitworks__bubble {
+  display: inline;
+  font-weight: 700;
+}
+
+.indent-text {
+  padding-left: 10px;
+  color: #000;
+}
+
+.restuarants__container {
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: column;
+}
+
+.fa-heart {
+  font-size: 1.5em;
+  padding: 15px;
+}
+
+#img-move {
+  object-position: center 61%;
+}
+
+.restuarants {
+  padding-top: 20px;
+}
+.restuarants__container {
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: column;
+  padding: 5px 5px 45px 5px;
+  margin: 0;
+}
+.restuarants__card {
+  position: relative;
+  border-radius: 15px;
+  background-color: white;
+  padding: 0;
+  width: 95%;
+  font-size: 14px;
+  line-height: 0.5;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.07), 0 8px 12px rgba(0, 0, 0, 0.14);
+  margin: 5px 0 10px 10px;
+}
+.restuarants__card__img {
+  object-fit: cover;
+  width: 100%;
+  height: 220px;
+  object-position: center 75%;
+  border-radius: 15px 15px 0 0;
+  padding: 0;
+}
+.restuarants__card .new {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 1;
+  padding: 10px 30px;
+  color: #1b6150;
+  background-color: #99E2D0;
+}
+
+.footer {
+  color: #fff;
+  background-color: #000;
+  padding: 20px;
+}
+.footer__title {
+  font-family: Shrikhand, cursive;
+  color: #fff;
+  padding-left: 15px;
+}
+.footer__nav {
+  display: flex;
+  flex-direction: column;
+  padding: 7px;
+}
+.footer__nav__item > a > i {
+  display: inline-block;
+  padding-right: 5px;
+}
+.footer__nav > a {
+  color: #fff;
   padding: 5px;
 }
 
-footer {
-  color: white;
-  background-color: black;
-  padding: 20px;
+.fa-utensils {
+  padding-right: 1em;
+}
+
+.fa-hands-helping {
+  padding-right: 1em;
+  font-size: 0.8em;
 }
 
 /*--!!Nest Media Queries in BEM blocks!!!--*/

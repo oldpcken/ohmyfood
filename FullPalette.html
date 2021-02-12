@@ -23,86 +23,92 @@
     
       <a href="index.html"><i class="fas fa-arrow-left"></i></a>
       <a href="#!">
-        <img class="logo" src="images/logo/ohmyfood.png" alt="OhMyFood Logo" title="ohmyfood">
+        <img class="header__logo" src="images/logo/ohmyfood.png" alt="OhMyFood Logo" title="ohmyfood">
       </a>
     
-      <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="The Full Palette">
+      <img class="header__img" src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="The Full Palette">
 
     </header>
 
-    <main>
+    <main class="main">
       
-      <h1 class="menu1">The Full Palette</h1>
-      <i class="far fa-heart fa-2x"></i>
+      <div class="menu__title">
+        <h1 class="menu__name">The Full Palette</h1>
+        <i class="far fa-heart fa-2x"></i>
+      </div>
 
-      <section class="menu1__container">
+      <section class="menu__container">
 
-        <h3 class="menu1__entrees">ENTREES</h3>
+        <h3 class="menu__entrees">ENTREES</h3>
+        <HR class="menu__rule"> 
+        <p class="menu__item">Escargot</p>
+        <p class="menu__item__desc">With southern French spices</p>
+        <span class="menu__item__price">25€</span>
 
-        <p class="menu1__item">Escargot</p>
-        <p>With southern French spices</p>
-        <p>25€</p>
+        <p class="menu__item">Duck Foie Gras</p>
+        <p class="menu__item__desc">With black truffle shavings</p>
+        <span class="menu__item__price">35€</span>
 
-        <p class="menu1__item">Duck Foie Gras</p>
-        <p>With black truffle shavings</p>
-        <p>35€</p>
-
-        <p class="menu1__item">Fried egg</p>
-        <p>With diced black pepper russet potatoes</p>
-        <p>20€</p>
-      
-      </section>
-
-      <section class="menu2__container">
-
-        <h3 class="menu2__entrees">MAIN DISH</h3>
-
-        <p class="menu2__item">Herb-Encrusted Steak</p>
-        <p>With delicately sliced and seasoned vegetables</p>
-        <p>40€</p>
-
-        <p class="menu2__item">Ox Tail Shepard's Pie</p>
-        <p>With black truffle and pureed parsnips</p>
-        <p>35€</p>
-
-        <p class="menu2__item">Filet of Sole</p>
-        <p>With citrus dressing</p>
-        <p>44€</p>
+        <p class="menu__item">Fried egg</p>
+        <p class="menu__item__desc">With diced black pepper russet potatoes</p>
+        <span class="menu__item__price">20€</span>
       
       </section>
 
-      <section class="menu3__container">
+      <section class="menu__container">
 
-        <h3 class="menu3__entrees">DESSERTS</h3>
+        <h3 class="menu__entrees">MAIN DISH</h3>
+        <HR class="menu__rule"> 
+        <p class="menu__item">Herb-Encrusted Steak</p>
+        <p class="menu__item__desc">With delicately sliced and seasoned vegetables</p>
+        <span class="menu__item__price">40€</span>
 
-        <p class="menu3__item">Paris Brest</p>
-        <p>Revisited</p>
-        <p>18€</p>
+        <p class="menu__item">Ox Tail Shepard's Pie</p>
+        <p class="menu__item__desc">With black truffle and pureed parsnips</p>
+        <span class="menu__item__price">35€</span>
 
-        <p class="menu3__item">Chocolate Macaroons</p>
-        <p>With vanilla ice cream</p>
-        <p>22€</p>
-
-        <p class="menu3__item">Chocolate Mousse</p>
-        <p>With spices and black truffle</p>
-        <p>23€</p>
+        <p class="menu__item">Filet of Sole</p>
+        <p class="menu__item__desc">With citrus dressing</p>
+        <span class="menu__item__price">44€</span>
       
       </section>
 
-      <a href="#!" class="order_link">Order</a>
+      <section class="menu__container">
+
+        <h3 class="menu__entrees">DESSERTS</h3>
+        <HR class="menu__rule"> 
+        <p class="menu__item">Paris Brest</p>
+        <p class="menu__item__desc">Revisited</p>
+        <span class="menu__item__price">18€</span>
+
+        <p class="menu__item">Chocolate Macaroons</p>
+        <p class="menu__item__desc">With vanilla ice cream</p>
+        <sppan class="menu__item__price">22€</span>
+
+        <p class="menu__item">Chocolate Mousse</p>
+        <p class="menu__item__desc">With spices and black truffle</p>
+        <span class="menu__item__price">23€</span>
+      
+      </section>
+      
+      <div class="order">
+        <a href="#!" class="order__link">Order</a>
+      </div>
       
     </main>
 
-    <footer>
-      <h3 class="footer__title">
-        <a href="index.html">ohmyfood</a>
+    <footer class="footer">
+
+      <h3>
+        <a class="footer__title" href="index.html">ohmyfood</a>
       </h3>
-      <ul class="footer__nav">
-        <li><a href="#!"><i class="fas fa-utensils"></i>Suggest a restaurant</a></li>
-        <li><a href="#!"><i class="fas fa-hands-helping"></i>Become a partner</a></li>
-        <li><a href="#!">Legal</a></li>
-        <li><a href="mailto:paul@ohmyfood.com">Contact</a></li>
-      </ul>
+
+      <div class="footer__nav">
+        <a class="footer__nav__item" href="#!"><i class="fas fa-utensils"></i>Suggest a restaurant</a>
+        <a class="footer__nav__item" href="#!"><i class="fas fa-hands-helping"></i>Become a partner</a>
+        <a href="#!">Legal</a>
+        <a href="mailto:paul@ohmyfood.com">Contact</a>
+      </div>
  
     </footer>
 

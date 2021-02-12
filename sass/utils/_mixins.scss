@@ -1,1 +1,9 @@
 //Mixins here
+@mixin dark-text {
+    color: darken($color-tertiary, 50%);
+} 
+
+@mixin lightenbg {
+    background-color: lighten($color-primary, 35%);
+}
+
