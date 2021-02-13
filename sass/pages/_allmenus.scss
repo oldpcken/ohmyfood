@@ -8,11 +8,17 @@
 }
 
 .main {
+  position: relative;
   border-radius: 30px 30px 0 0;
-  // margin-top: -25px;
+  margin-top: -25px;
   z-index: 3;
+  margin: 0;
 }
 
+.header {
+  position: relative;
+  z-index: 1;
+}
 .header__img {
   width: 100%;
   object-fit: cover;
@@ -50,10 +56,10 @@
 }
 
 .order {
-  display: inline-block;
-  margin: 60px auto;
+  display: flex;
+  // margin: 60px auto;
   // align-items: center;
-  // justify-content: center;
+  justify-content: center;
   // text-align: center;
 } 
 
@@ -65,6 +71,6 @@
   background-color: $color-secondary;
   background-image: linear-gradient($color-secondary, $color-primary);
   box-shadow: 0 8px 12px rgba(0,0,0,0.07), 0 8px 12px rgba(0,0,0,0.14);
-  margin: 60px auto;
+  margin: 60px 0;
 }
 

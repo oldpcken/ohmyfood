@@ -11,8 +11,12 @@
 
 @font-face {
   font-family: "Shrikhand";
-  src:url("/fonts/Shrikhand-Regular.ttf");
+  src: url("./fonts/Shrikhand-Regular.ttf") !important;
 }
+
+* {
+  font-family: $page-text, sans-serif;
+ }
 
 .loader {
     position: fixed;
@@ -22,7 +26,7 @@
     height: 100vh;
     padding: 0;
     animation: disappear 3s ease-in forwards;
-    background-color: darkslategray;
+    background-color: rgb(58, 73, 73);
     z-index: 4;
 }
   
@@ -72,16 +76,13 @@
   }
 }
 
-* {
-  font-family: $page-text, sans-serif;
- }
-
 a {
   text-decoration: none;
 }
 
 main {
   background-color: #f2f2f2;
+  margin: 0;
 }
 
 .header__logo {
