@@ -10,9 +10,9 @@
 .main {
   position: relative;
   border-radius: 30px 30px 0 0;
-  margin-top: -25px;
-  z-index: 3;
-  margin: 0;
+  margin-top: -27px;
+  z-index: 1;
+  padding: 0;
 }
 
 .header {
@@ -44,16 +44,37 @@
   padding: 5px;
 }
 
-.menu__container {
-  display: flex;
-  flex-direction: column;
-}
-
 .menu__rule {
   border: 2px solid #99E2D0;
   width: 45px;
   justify-content: left;
   margin: -12px 0 0 3px;
+}
+
+.menu__container {
+  display: flex;
+  flex-flow: column;
+  padding-top: 20px;
+  width: 97%;
+}
+
+.menu__subcontainer {
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: column;
+  padding: 5px 5px 45px 5px;
+  margin: 0;
+}
+.menu__subcontainer .menu__order {
+  display: flex;
+  border-radius: 15px;
+  background-color: white;
+  padding: 0;
+  width: 99%;
+  font-size: 1em;
+  line-height: 0.5;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.07), 0 8px 12px rgba(0, 0, 0, 0.14);
+  margin: 10px 0;
 }
 
 .order {
@@ -70,6 +91,11 @@
   background-image: linear-gradient(#FF79DA, #9356DC);
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.07), 0 8px 12px rgba(0, 0, 0, 0.14);
   margin: 60px 0;
+}
+.order__link:hover {
+  background: #ff9de4;
+  background-image: linear-gradient(#ff9de4, #a674e2);
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.28), 0 12px 16px rgba(0, 0, 0, 0.28);
 }
 
 @font-face {
@@ -143,6 +169,7 @@ a {
 main {
   background-color: #f2f2f2;
   margin: 0;
+  font-size: 16px;
 }
 
 .header__logo {
@@ -179,6 +206,11 @@ main {
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.07), 0 8px 12px rgba(0, 0, 0, 0.14);
   margin: 40px auto;
 }
+.explore:hover {
+  background: #ff9de4;
+  background-image: linear-gradient(#ff9de4, #a674e2);
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.28), 0 12px 16px rgba(0, 0, 0, 0.28);
+}
 
 .verbiage {
   display: block;
@@ -192,8 +224,23 @@ main {
   display: flex;
   flex-flow: column;
   padding: 5px 0 10px 0;
-  margin: 10 0 30px 0;
+  margin: 10px 0 30px 0;
   align-items: center;
+}
+@media (min-width: 650px) and (max-width: 1079px) {
+  .howitworks__container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 10px 15px 30px 15px;
+  }
+}
+@media (min-width: 1080px) {
+  .howitworks__container {
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 10px 15px 30px 15px;
+  }
 }
 
 .howitworks__item {
@@ -243,8 +290,9 @@ main {
 }
 
 .fa-heart {
-  font-size: 1.5em;
+  font-size: 1.6em;
   padding: 15px;
+  color: #000;
 }
 
 #img-move {
@@ -271,6 +319,11 @@ main {
   line-height: 0.5;
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.07), 0 8px 12px rgba(0, 0, 0, 0.14);
   margin: 5px 0 10px 10px;
+}
+.restuarants__card .heart {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
 }
 .restuarants__card__img {
   object-fit: cover;
@@ -304,6 +357,12 @@ main {
   display: flex;
   flex-direction: column;
   padding: 7px;
+}
+@media (min-width: 1080px) {
+  .footer__nav {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
 }
 .footer__nav__item > a > i {
   display: inline-block;

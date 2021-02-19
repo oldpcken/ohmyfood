@@ -10,9 +10,9 @@
 .main {
   position: relative;
   border-radius: 30px 30px 0 0;
-  margin-top: -25px;
-  z-index: 3;
-  margin: 0;
+  margin-top: -27px;
+  z-index: 1;
+  padding: 0;
 }
 
 .header {
@@ -43,10 +43,10 @@
   padding: 5px;
 }
 
-.menu__container {
-  display: flex;
-  flex-direction: column;
-}
+// .menu__container {
+//   display: flex;
+//   flex-direction: column;
+// }
 
 .menu__rule {
   border: 2px solid $color-tertiary;
@@ -55,12 +55,38 @@
   margin: -12px 0 0 3px;
 }
 
+.menu__container {
+  display: flex;
+  flex-flow: column;
+  padding-top: 20px;
+  width: 97%;
+}
+
+.menu__subcontainer {
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: column;
+  padding: 5px 5px 45px 5px;
+  margin: 0;
+  & .menu__order {
+  // position: relative;
+  display: flex;
+  border-radius: 15px;
+  background-color: white;
+  padding: 0;
+  width: 99%;
+  font-size: 1em;
+  line-height: .5;
+  box-shadow: 0 8px 12px rgba(0,0,0,0.07), 0 8px 12px rgba(0,0,0,0.14);
+  margin: 10px 0;
+  }
+}
+
+
 .order {
   display: flex;
-  // margin: 60px auto;
   // align-items: center;
   justify-content: center;
-  // text-align: center;
 } 
 
 .order__link {
@@ -72,5 +98,9 @@
   background-image: linear-gradient($color-secondary, $color-primary);
   box-shadow: 0 8px 12px rgba(0,0,0,0.07), 0 8px 12px rgba(0,0,0,0.14);
   margin: 60px 0;
+  &:hover {
+    @include lighter-button;
+    box-shadow: 0 12px 16px rgba(0,0,0,0.28), 0 12px 16px rgba(0,0,0,0.28);
+  }
 }
 

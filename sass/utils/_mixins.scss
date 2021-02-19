@@ -7,3 +7,19 @@
     background-color: lighten($color-primary, 35%);
 }
 
+@mixin lighter-button {
+    background: lighten($color-secondary, 7%);
+    background-image: linear-gradient(lighten($color-secondary, 7%), lighten($color-primary, 7%));
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
