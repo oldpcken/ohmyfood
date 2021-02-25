@@ -41,7 +41,7 @@
 }
 
 .menu__entrees {
-  padding: 5px;
+  padding: 0;
 }
 
 .menu__rule {
@@ -55,7 +55,7 @@
   display: flex;
   flex-flow: column;
   padding-top: 20px;
-  width: 97%;
+  width: 99%;
 }
 
 .menu__subcontainer {
@@ -64,17 +64,55 @@
   flex-flow: column;
   padding: 5px 5px 45px 5px;
   margin: 0;
+  justify-content: space-between;
 }
-.menu__subcontainer .menu__order {
+
+.menu__text {
+  width: 73%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.menu__item {
   display: flex;
   border-radius: 15px;
   background-color: white;
   padding: 0;
   width: 99%;
   font-size: 1em;
-  line-height: 0.5;
+  line-height: 0.8;
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.07), 0 8px 12px rgba(0, 0, 0, 0.14);
-  margin: 10px 0;
+  margin: 15px 0;
+}
+.menu__item__order {
+  font-weight: 700;
+  padding-left: 10px;
+}
+.menu__item__desc {
+  padding-left: 10px;
+}
+.menu__item__price {
+  font-weight: 700;
+  padding: 35px 0 0 20px;
+  width: 40px;
+  border: 1px solid red;
+  margin: 0;
+  justify-content: right;
+  line-height: 0.7;
+}
+.menu__item__check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #99E2D0;
+  width: 60px;
+  border: 1px solid blue;
+  border-radius: 0 15px 15px 0;
+}
+
+.fa-check-circle {
+  color: #fff;
+  font-size: 1.5em;
 }
 
 .order {
@@ -169,7 +207,6 @@ a {
 main {
   background-color: #f2f2f2;
   margin: 0;
-  font-size: 16px;
 }
 
 .header__logo {
@@ -286,7 +323,21 @@ main {
 .restuarants__container {
   box-sizing: border-box;
   display: flex;
-  flex-flow: column;
+  flex-direction: column;
+}
+@media (min-width: 650px) and (max-width: 1079px) {
+  .restuarants__container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+}
+@media (min-width: 1080px) {
+  .restuarants__container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
 }
 
 .fa-heart {
@@ -320,10 +371,32 @@ main {
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.07), 0 8px 12px rgba(0, 0, 0, 0.14);
   margin: 5px 0 10px 10px;
 }
+@media (min-width: 650px) and (max-width: 1079px) {
+  .restuarants__card {
+    max-width: 650px;
+  }
+}
+@media (min-width: 1080px) {
+  .restuarants__card {
+    max-width: 650px;
+  }
+}
+.restuarants__card .heart-fav {
+  opacity: 0;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
 .restuarants__card .heart {
   position: absolute;
   right: 10px;
   bottom: 10px;
+}
+.restuarants__card .heart:hover .heart-fav {
+  opacity: 1;
+  color: #FF79DA;
+  transition: 3s;
+  transform: 3s ease;
 }
 .restuarants__card__img {
   object-fit: cover;
