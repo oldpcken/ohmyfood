@@ -78,16 +78,16 @@
 
 .menu__container {
   display: flex;
-  flex-flow: column;
-  padding: 20px 0 0 5px;
+  flex-direction: column;
+  padding: 20px 0 0 0;
   width: 99%;
   @include tablet {
     flex-flow: row wrap;
-    // width: 45%;
+    justify-content: center;
   }
   @include desktop {
     flex-flow: row wrap;
-    // width: 30%;
+    justify-content: center;
   }
 }
 
@@ -98,81 +98,119 @@
   padding: 5px 5px 40px 5px;
   margin: 0;
   justify-content: space-between;
-}
-
-.menu__text {
-  width: 72%;
-  // width: 95%;
-  overflow: hidden;
-  white-space: nowrap;
+  @include tablet {
+    margin-left: 30px;
+    max-width: 450px;
+  }
+  @include desktop {
+    margin-left: 50px;
+    max-width: 500px;
+  }
 }
 
 .menu__item {
-  display: flex;
-  // flex: none;
+  display: inline-block;
   border-radius: 15px;
-  background-color: white;
+  background-color: #fff;
   padding: 0;
-  width: 99%;
+  width: 100%;
   font-size: 1em;
-  line-height: .8;
+  line-height: .9;
   box-shadow: 0 8px 12px rgba(0,0,0,0.07), 0 8px 12px rgba(0,0,0,0.14);
-  margin: 15px 0;
+  margin: 8px 0;
+  white-space: nowrap;
   overflow: hidden;
-  // &:hover {
-
-  // }
+  // border: 1px solid yellow;
+  &:hover {
+    .fa-check-circle {
+      overflow: hidden;
+      animation: roll 1s forwards;
+    }
+  }
   &__order {
     font-weight: 700;
-    padding-left: 10px;
+    padding: 0 0 0 11px;
   }
   &__desc {
-    padding-left: 10px;
+    padding: 0 0 0 11px;
+    margin: 0 0 10px 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  &__text {
+    display: inline-block;
+    width: 87%;
+    padding: 0;
+    margin: 0;
+    // border: 1px solid red;
+    &:hover {
+      animation: slide-in 1s ease-in-out forwards;
+      // &:after {
+        // animation: slide-out 2s ease-in-out forwards;
+      // }
+    }
   }
   &__price {
+    display: inline-block;
     font-weight: 700;
-    padding: 45px 15px 0 5px;
-    width: 30px;
-    margin: 0;
-    justify-content: right;
-    line-height: .7;
-    // border: 1px solid red;
+    padding: 0;
+    width: 14%;
+    margin: 0 0 0 -2px;
+    text-align: center;
+    vertical-align: 80%;
+    // border: 1px solid green;
   }
   &__check {
-    display: flex;
+    display: inline-block;
+    text-align: center;
     align-items: center;
-    justify-content: center;
+    vertical-align: top;
+    padding: 25px 0;
+    margin: 0 0 0 -2px;
     background-color: $color-tertiary;
-    overflow: hidden;
-    width: 63px;
+    width: 14%;
     border-radius: 0 15px 15px 0;
     // border: 1px solid blue;
-    &:hover {
-      overflow: hidden;
-      animation: roll 2s forwards;
+    @include tablet {
+      max-width: 575px;
+    }
+    @include desktop {
+      max-width: 650px;
     }
   }
 }
 
 @keyframes roll {
-  from {
+  0% {
     transform: rotate(0deg);
   }
 
-  to {
+  100% {
     transform: rotate(360deg);
   }
 }
 
-// @keyframes slide {
-//   100% {
-//     transform: ;
-//   }
+@keyframes slide-in {
+  0% {
+    width: 86%;
+  }
 
-//   0% {
-//     transform: ;
-//   }
-// }
+  100% {
+    width: 72%;
+  }
+} 
+
+@keyframes slide-out {
+  0% {
+    width: 72%;
+  }
+
+  100% {
+    width: 86%;
+  }
+
+}
 
 .fa-check-circle {
   color: #fff;

@@ -74,18 +74,20 @@
 
 .menu__container {
   display: flex;
-  flex-flow: column;
-  padding: 20px 0 0 5px;
+  flex-direction: column;
+  padding: 20px 0 0 0;
   width: 99%;
 }
 @media (min-width: 650px) and (max-width: 1079px) {
   .menu__container {
     flex-flow: row wrap;
+    justify-content: center;
   }
 }
 @media (min-width: 1080px) {
   .menu__container {
     flex-flow: row wrap;
+    justify-content: center;
   }
 }
 
@@ -97,60 +99,109 @@
   margin: 0;
   justify-content: space-between;
 }
-
-.menu__text {
-  width: 72%;
-  overflow: hidden;
-  white-space: nowrap;
+@media (min-width: 650px) and (max-width: 1079px) {
+  .menu__subcontainer {
+    margin-left: 30px;
+    max-width: 450px;
+  }
+}
+@media (min-width: 1080px) {
+  .menu__subcontainer {
+    margin-left: 50px;
+    max-width: 500px;
+  }
 }
 
 .menu__item {
-  display: flex;
+  display: inline-block;
   border-radius: 15px;
-  background-color: white;
+  background-color: #fff;
   padding: 0;
-  width: 99%;
+  width: 100%;
   font-size: 1em;
-  line-height: 0.8;
+  line-height: 0.9;
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.07), 0 8px 12px rgba(0, 0, 0, 0.14);
-  margin: 15px 0;
+  margin: 8px 0;
+  white-space: nowrap;
   overflow: hidden;
+}
+.menu__item:hover .fa-check-circle {
+  overflow: hidden;
+  animation: roll 1s forwards;
 }
 .menu__item__order {
   font-weight: 700;
-  padding-left: 10px;
+  padding: 0 0 0 11px;
 }
 .menu__item__desc {
-  padding-left: 10px;
+  padding: 0 0 0 11px;
+  margin: 0 0 10px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.menu__item__text {
+  display: inline-block;
+  width: 87%;
+  padding: 0;
+  margin: 0;
+}
+.menu__item__text:hover {
+  animation: slide-in 1s ease-in-out forwards;
 }
 .menu__item__price {
+  display: inline-block;
   font-weight: 700;
-  padding: 45px 15px 0 5px;
-  width: 30px;
-  margin: 0;
-  justify-content: right;
-  line-height: 0.7;
+  padding: 0;
+  width: 14%;
+  margin: 0 0 0 -2px;
+  text-align: center;
+  vertical-align: 80%;
 }
 .menu__item__check {
-  display: flex;
+  display: inline-block;
+  text-align: center;
   align-items: center;
-  justify-content: center;
+  vertical-align: top;
+  padding: 25px 0;
+  margin: 0 0 0 -2px;
   background-color: #99E2D0;
-  overflow: hidden;
-  width: 63px;
+  width: 14%;
   border-radius: 0 15px 15px 0;
 }
-.menu__item__check:hover {
-  overflow: hidden;
-  animation: roll 2s forwards;
+@media (min-width: 650px) and (max-width: 1079px) {
+  .menu__item__check {
+    max-width: 575px;
+  }
+}
+@media (min-width: 1080px) {
+  .menu__item__check {
+    max-width: 650px;
+  }
 }
 
 @keyframes roll {
-  from {
+  0% {
     transform: rotate(0deg);
   }
-  to {
+  100% {
     transform: rotate(360deg);
+  }
+}
+@keyframes slide-in {
+  0% {
+    width: 86%;
+  }
+  100% {
+    width: 72%;
+  }
+}
+@keyframes slide-out {
+  0% {
+    width: 72%;
+  }
+  100% {
+    width: 86%;
   }
 }
 .fa-check-circle {
@@ -302,20 +353,22 @@ main {
 
 .howitworks__container {
   display: flex;
-  flex-flow: column;
+  flex-direction: column;
   padding: 5px 0 10px 0;
-  margin: 10px 0 30px 0;
+  margin: 10px 0 30px 8px;
   align-items: center;
 }
 @media (min-width: 650px) and (max-width: 1079px) {
   .howitworks__container {
     flex-flow: row wrap;
+    justify-content: center;
     margin: 10px 10px 30px 10px;
   }
 }
 @media (min-width: 1080px) {
   .howitworks__container {
     flex-flow: row wrap;
+    justify-content: center;
     margin: 10px 10px 30px 10px;
   }
 }
@@ -325,11 +378,23 @@ main {
   padding: 15px 0;
   background-color: #f2f2f2;
   margin: 10px 0;
-  border-radius: 25px;
+  border-radius: 20px;
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.07), 0 8px 12px rgba(0, 0, 0, 0.14);
 }
 .howitworks__item:nth-child(3) {
   background-color: #f2eafb;
+}
+@media (min-width: 650px) and (max-width: 1079px) {
+  .howitworks__item {
+    max-width: 450px;
+    margin-left: 15px;
+  }
+}
+@media (min-width: 1080px) {
+  .howitworks__item {
+    max-width: 500px;
+    margin-left: 30px;
+  }
 }
 
 .number {
@@ -367,11 +432,13 @@ main {
 @media (min-width: 650px) and (max-width: 1079px) {
   .restuarants__container {
     flex-flow: row wrap;
+    justify-content: center;
   }
 }
 @media (min-width: 1080px) {
   .restuarants__container {
     flex-flow: row wrap;
+    justify-content: center;
   }
 }
 
@@ -417,12 +484,12 @@ main {
 }
 @media (min-width: 650px) and (max-width: 1079px) {
   .restuarants__card {
-    max-width: 625px;
+    max-width: 440px;
   }
 }
 @media (min-width: 1080px) {
   .restuarants__card {
-    max-width: 625px;
+    max-width: 440px;
   }
 }
 .restuarants__card .heart {
