@@ -1,0 +1,35 @@
+.explore {
+    display: inline-block;
+    text-align: center;
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 25px;
+    background-color: $color-secondary;
+    background-image: linear-gradient($color-secondary, $color-primary);
+    box-shadow: 0 8px 12px rgba(0,0,0,0.07), 0 8px 12px rgba(0,0,0,0.14);
+    margin: 40px auto;
+    &:hover {
+      @include lighter-button;
+      box-shadow: 0 12px 16px rgba(0,0,0,0.28), 0 12px 16px rgba(0,0,0,0.28);
+    }
+  }
+
+  .order {
+    display: flex;
+    justify-content: center;
+  } 
+  
+  .order__link {
+    display: inline-block;
+    color: #fff;
+    padding: 15px 80px;
+    border-radius: 25px;
+    background-color: $color-secondary;
+    background-image: linear-gradient($color-secondary, $color-primary);
+    box-shadow: 0 8px 12px rgba(0,0,0,0.07), 0 8px 12px rgba(0,0,0,0.14);
+    margin: 60px 0;
+    &:hover {
+      @include lighter-button;
+      box-shadow: 0 12px 16px rgba(0,0,0,0.28), 0 12px 16px rgba(0,0,0,0.28);
+    }
+  }  

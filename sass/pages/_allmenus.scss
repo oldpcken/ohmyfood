@@ -77,17 +77,26 @@
 
 .menu__rule {
   border: 2px solid $color-tertiary;
-  width: 45px;
+  width: 36px;
   justify-content: left;
   margin: -12px 0 7px 3px;
 }
 
+//Holds the 3 menu sections
 .menu__container {
   display: flex;
   flex-direction: column;
-  justify-items: top;
   padding: 20px 0 0 0;
   width: 99%;
+  .menu__subcontainer:nth-child(1) {
+    animation-delay: 350ms;
+  }
+  .menu__subcontainer:nth-child(2) {
+    animation-delay: 700ms;
+  }
+  .menu__subcontainer:nth-child(3) {
+    animation-delay: 1030ms;
+  }
   @include tablet {
     flex-flow: row wrap;
     justify-content: center;
@@ -98,15 +107,16 @@
   }
 }
 
+//Holds the menu items
 .menu__subcontainer {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   padding: 5px 5px 40px 5px;
   margin: 0;
-  justify-content: space-between;
   // animation on page load
-  animation: rise-up 2s 1s forward;
+  opacity: 0;
+  animation: rise-up 1.3s 350ms forwards;
   @include tablet {
     margin-left: 30px;
     max-width: 450px;
@@ -119,7 +129,7 @@
 
 @keyframes rise-up {
   0% {
-      transform: translateY(-10%);
+      transform: translateY(5%);
       opacity: 0;
   }
   100% {
@@ -128,6 +138,7 @@
   }
 }
 
+//For the order/description text, the price, & checkmark
 .menu__item {
   display: inline-block;
   border-radius: 15px;
@@ -140,13 +151,9 @@
   margin: 8px 0;
   white-space: nowrap;
   overflow: hidden;
-  // border: 1px solid yellow;
   &:hover {
     .fa-check-circle {
-      animation: roll 1.4s both;
-      &::after {
-        animation: roll 1.4s backwards;
-      }
+      animation: roll 1.4s forwards;
     }
   }
   &__order {
@@ -165,16 +172,9 @@
     width: 85%;
     padding: 0;
     margin: 0;
-    // border: 1px solid red;
+    transition: all 1s ease-in-out;
     &:hover {
       width: 71%;
-      transition: all 1s ease-in-out;
-      // animation: slide-in 1s ease-in-out both;
-    
-      // &::after {
-      //   content: "";
-      //   animation: slide-out 4s ease-in-out;
-      // }
     }
   }
   &__price {
@@ -185,7 +185,6 @@
     margin: 0 0 0 -2px;
     text-align: center;
     vertical-align: 80%;
-    // border: 1px solid green;
   }
   &__check {
     display: inline-block;
@@ -197,7 +196,6 @@
     background-color: $color-tertiary;
     width: 14%;
     border-radius: 0 15px 15px 0;
-    // border: 1px solid blue;
     @include tablet {
       max-width: 575px;
     }
@@ -205,6 +203,12 @@
       max-width: 650px;
     }
   }
+}
+
+.fa-check-circle {
+  color: #fff;
+  font-size: 1.5em;
+  animation: roll-back 1.4s forwards;
 }
 
 @keyframes roll {
@@ -217,48 +221,12 @@
   }
 }
 
-// @keyframes slide-in {
-//   0% {
-//     width: 85%;
-//   }
+@keyframes roll-back {
+  0% {
+    transform: rotate(360deg);
+  }
 
-//   100% {
-//     width: 71%;
-//   }
-// } 
-
-// @keyframes slide-out {
-//   0% {
-//     width: 71%;
-//   }
-
-//   100% {
-//     width: 85%;
-//   }
-
-// }
-
-.fa-check-circle {
-  color: #fff;
-  font-size: 1.5em;
-}
-
-.order {
-  display: flex;
-  justify-content: center;
-} 
-
-.order__link {
-  display: inline-block;
-  color: #fff;
-  padding: 15px 80px;
-  border-radius: 25px;
-  background-color: $color-secondary;
-  background-image: linear-gradient($color-secondary, $color-primary);
-  box-shadow: 0 8px 12px rgba(0,0,0,0.07), 0 8px 12px rgba(0,0,0,0.14);
-  margin: 60px 0;
-  &:hover {
-    @include lighter-button;
-    box-shadow: 0 12px 16px rgba(0,0,0,0.28), 0 12px 16px rgba(0,0,0,0.28);
+  100% {
+    transform: rotate(0deg);
   }
 }
