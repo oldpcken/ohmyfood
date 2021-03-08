@@ -273,7 +273,7 @@
 }
 @font-face {
   font-family: "Shrikhand";
-  src: url("./fonts/Shrikhand-Regular.ttf") !important;
+  src: url("../fonts/Shrikhand-Regular.ttf") !important;
 }
 * {
   font-family: roboto, sans-serif;
