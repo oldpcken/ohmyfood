@@ -79,7 +79,6 @@
   right: 10px;
   bottom: 30px;
   padding: 0;
-  align-items: right;
   width: 8%;
 }
 .menu__title .menu-heart:hover {
@@ -90,7 +89,6 @@
   position: absolute;
   right: 10px;
   bottom: 30px;
-  align-items: right;
   padding: 0;
   width: 8%;
 }
