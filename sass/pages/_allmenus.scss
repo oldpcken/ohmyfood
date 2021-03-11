@@ -54,8 +54,8 @@
     &:hover {
       opacity: 1;
       color: $color-primary;
-      transition: 2s;
-      animation: 2s ease-in;
+      cursor: pointer;
+      transition: all 2500ms ease-in;
     }
   }
 }
@@ -150,6 +150,7 @@
   white-space: nowrap;
   overflow: hidden;
   &:hover {
+    cursor: pointer;
     .fa-check-circle {
       animation: roll 1.4s forwards;
     }

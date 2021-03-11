@@ -245,8 +245,9 @@ main {
           opacity: 0;
         }
         opacity: 1;
+        cursor: pointer;
         color: $color-primary;
-        transition: all 2s ease-in-out;
+        transition: all 2500ms ease-in;
       }
     }
             

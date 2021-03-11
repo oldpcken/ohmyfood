@@ -95,8 +95,8 @@
 .menu__title .menu-heart-fav:hover {
   opacity: 1;
   color: #9356DC;
-  transition: 2s;
-  animation: 2s ease-in;
+  cursor: pointer;
+  transition: all 2500ms ease-in;
 }
 
 .menu__name {
@@ -191,6 +191,9 @@
   margin: 8px 0;
   white-space: nowrap;
   overflow: hidden;
+}
+.menu__item:hover {
+  cursor: pointer;
 }
 .menu__item:hover .fa-check-circle {
   animation: roll 1.4s forwards;
@@ -525,8 +528,9 @@ main {
 }
 .restuarants__card .heart-fav:hover {
   opacity: 1;
+  cursor: pointer;
   color: #9356DC;
-  transition: all 2s ease-in-out;
+  transition: all 2500ms ease-in;
 }
 .restuarants__card .heart-fav:hover .heart {
   opacity: 0;
