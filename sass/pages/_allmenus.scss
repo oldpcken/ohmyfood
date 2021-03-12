@@ -55,7 +55,6 @@
       opacity: 1;
       color: $color-primary;
       cursor: pointer;
-      cursor: hand;
       transition: all 2500ms ease-in;
     }
   }
@@ -152,7 +151,6 @@
   overflow: hidden;
   &:hover {
     cursor: pointer;
-    cursor: hand;
     .fa-check-circle {
       animation: roll 1.4s forwards;
     }

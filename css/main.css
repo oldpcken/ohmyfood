@@ -96,7 +96,6 @@
   opacity: 1;
   color: #9356DC;
   cursor: pointer;
-  cursor: hand;
   transition: all 2500ms ease-in;
 }
 
@@ -195,7 +194,6 @@
 }
 .menu__item:hover {
   cursor: pointer;
-  cursor: hand;
 }
 .menu__item:hover .fa-check-circle {
   animation: roll 1.4s forwards;
@@ -531,7 +529,6 @@ main {
 .restuarants__card .heart-fav:hover {
   opacity: 1;
   cursor: pointer;
-  cursor: hand;
   color: #9356DC;
   transition: all 2500ms ease-in;
 }
